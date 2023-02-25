@@ -1,8 +1,7 @@
-
 package Entidades;
 
-
 public class User {
+
     private int id;
     private String username;
     private String nombre;
@@ -39,5 +38,5 @@ public class User {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-    
+
 }

@@ -4,16 +4,14 @@ import Entidades.Sesion;
 
 public class Home extends javax.swing.JFrame {
 
-    
     public Home() {
         initComponents();
-        setVisible(true);   
+        setVisible(true);
         nombre.setText(Sesion.user.getNombre());
         apellidos.setText(Sesion.user.getApellidos());
         id.setText(String.valueOf(Sesion.user.getId()));
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -48,6 +46,11 @@ public class Home extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenu3.setText("jMenu3");
@@ -105,10 +108,14 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         Sesion.logout();
         this.dispose();
-        this.setVisible(false);
         Login l = new Login();
 
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        Modal modal = new Modal(this, true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

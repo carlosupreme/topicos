@@ -82,7 +82,6 @@ public class Login extends javax.swing.JFrame {
         if (loginData.isValid(user, pass)) {
             Sesion.login(loginData.getUserData(user));
             this.dispose();
-            this.setVisible(false);
             Home home = new Home();
         }
 

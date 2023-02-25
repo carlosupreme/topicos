@@ -1,10 +1,9 @@
-
 package Entidades;
 
 import java.util.HashMap;
 
-
 public class Login {
+
     private HashMap<String, String> data;
 
     public Login() {
@@ -19,14 +18,14 @@ public class Login {
 
         return data.get(username).equals(password);
     }
-    
-    public User getUserData(String username){
+
+    public User getUserData(String username) {
         User user = new User();
         user.setNombre("Carlos");
         user.setApellidos("Sosa Perera");
         user.setId(1);
         user.setUsername(username);
-        
+
         return user;
     }
 }
